@@ -1,5 +1,4 @@
 ﻿
-using GameZone.Models;
 
 namespace GameZone.Data
 {

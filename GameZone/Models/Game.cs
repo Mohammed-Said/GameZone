@@ -7,10 +7,8 @@ namespace GameZone.Models
         public string Description { get; set; }=String.Empty;
         public string Cover { get; set; }=String.Empty;
 
-        //public List<Category>? Categories { get; set; }
-        //public ICollection<Device>? Devices { get; set; }
-        
-
+        public ICollection<GameDevice> Devices { get; set; } = new List<GameDevice>();
+        public ICollection<GameCategory> Categories { get; set; } = new List<GameCategory>();
 
     }
 }

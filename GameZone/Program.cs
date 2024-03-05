@@ -1,3 +1,5 @@
+
+
 namespace GameZone
 {
     public class Program
@@ -11,6 +13,11 @@ namespace GameZone
 
             builder.Services.AddDbContext<AppDbContext>(option =>
             option.UseSqlServer(connection));
+
+            //
+            builder.Services.AddScoped<ICategoryService, CategoryService>();
+            builder.Services.AddScoped<IDevicesService, DevicesService>();
+            builder.Services.AddScoped<IGameService, GameService>();
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
